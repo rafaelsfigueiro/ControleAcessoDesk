@@ -32,10 +32,14 @@ namespace ControleAcessoDesk.v2
                 {
                     if (usuario.Ativo)
                     {
+                        CadastroDeUsuario cadastroDeUsuario = new CadastroDeUsuario();
+                        cadastroDeUsuario.Show();
+                        this.Hide();  //Fecha a forma atual
+
                         // login aceito
                         // código para registrar o usuario logado
 
-                        Close();
+                      
                     }
                     else
                     {
@@ -53,5 +57,13 @@ namespace ControleAcessoDesk.v2
                 MessageBox.Show("Os campos Usuario e senha são obrigatórios");
             }
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            CadastroDeUsuario cadastroDeUsuario = new CadastroDeUsuario();
+            cadastroDeUsuario.Show();
+            this.Hide();  //Fecha a forma atual
+        }
     }
 }
+// teste git...

@@ -53,5 +53,24 @@ namespace ControleAcessoDesk.v2
                 MessageBox.Show("Os campos email e senha são obrigatórios");
             }
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = new(txtNome.Text,txtCpf.Text,cmbTipo.Text,txtSenha.Text);
+            usuario.Inserir();
+            txtId.Text = usuario.Id.ToString();
+            MessageBox.Show($"Usuário {usuario.Nome} gravado com sucesso com o ID {usuario.Id}");
+            CadastroDeUsuario_Load(sender, e);
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -103,8 +103,8 @@ namespace ControleAcesso.Desk
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"insert usuarios (nome, senha, ativo) " +
-                $"values ('{Nome}',md5('{Senha}'), default)";
+            cmd.CommandText = $"INSERT INTO usuarios (nome, cpf, tipousuario, senha, ativo) " +
+    $"VALUES ('{Nome}', '{Cpf}', '{TipoUsuario}', MD5('{Senha}'), 1)";
             cmd.ExecuteNonQuery();
             cmd.CommandText = "select last_insert_id()";
             Id = Convert.ToInt32(cmd.ExecuteScalar());

@@ -39,30 +39,31 @@
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(370, 183);
+            txtSenha.Location = new Point(324, 183);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(156, 23);
             txtSenha.TabIndex = 13;
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(370, 145);
+            txtUsuario.Location = new Point(324, 145);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(156, 23);
             txtUsuario.TabIndex = 12;
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(451, 250);
+            btnCadastrar.Location = new Point(405, 232);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(75, 23);
             btnCadastrar.TabIndex = 11;
             btnCadastrar.Text = "&Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // btnAcessar
             // 
-            btnAcessar.Location = new Point(370, 250);
+            btnAcessar.Location = new Point(324, 232);
             btnAcessar.Name = "btnAcessar";
             btnAcessar.Size = new Size(75, 23);
             btnAcessar.TabIndex = 10;
@@ -94,7 +95,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(372, 66);
+            label1.Location = new Point(354, 79);
             label1.Name = "label1";
             label1.Size = new Size(78, 32);
             label1.TabIndex = 7;

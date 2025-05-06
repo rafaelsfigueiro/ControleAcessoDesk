@@ -29,20 +29,22 @@
         private void InitializeComponent()
         {
             btnEntrar = new Button();
-            comboBox1 = new ComboBox();
+            cmbTipo = new ComboBox();
             label6 = new Label();
             pictureBox1 = new PictureBox();
             txtSenha = new TextBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
-            textCpf = new TextBox();
+            txtCpf = new TextBox();
             label2 = new Label();
             label1 = new Label();
             txtNome = new TextBox();
             btnEditar = new Button();
             btnSalvar = new Button();
             button2 = new Button();
+            txtId = new TextBox();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -55,14 +57,14 @@
             btnEntrar.Text = "E&ntrar";
             btnEntrar.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cmbTipo
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Administrador", "Funcionário", "Visitante" });
-            comboBox1.Location = new Point(271, 202);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(220, 23);
-            comboBox1.TabIndex = 30;
+            cmbTipo.FormattingEnabled = true;
+            cmbTipo.Items.AddRange(new object[] { "Administrador", "Funcionário", "Visitante" });
+            cmbTipo.Location = new Point(285, 189);
+            cmbTipo.Name = "cmbTipo";
+            cmbTipo.Size = new Size(220, 23);
+            cmbTipo.TabIndex = 30;
             // 
             // label6
             // 
@@ -83,7 +85,7 @@
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(271, 244);
+            txtSenha.Location = new Point(271, 221);
             txtSenha.Multiline = true;
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(234, 23);
@@ -93,7 +95,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(167, 247);
+            label5.Location = new Point(156, 224);
             label5.Name = "label5";
             label5.Size = new Size(39, 15);
             label5.TabIndex = 26;
@@ -103,7 +105,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(271, 81);
+            label4.Location = new Point(271, 22);
             label4.Name = "label4";
             label4.Size = new Size(252, 32);
             label4.TabIndex = 25;
@@ -112,18 +114,18 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(167, 202);
+            label3.Location = new Point(152, 197);
             label3.Name = "label3";
             label3.Size = new Size(88, 15);
             label3.TabIndex = 24;
             label3.Text = "&Tipo de usuário";
             // 
-            // textCpf
+            // txtCpf
             // 
-            textCpf.Location = new Point(271, 160);
-            textCpf.Name = "textCpf";
-            textCpf.Size = new Size(234, 23);
-            textCpf.TabIndex = 23;
+            txtCpf.Location = new Point(271, 160);
+            txtCpf.Name = "txtCpf";
+            txtCpf.Size = new Size(234, 23);
+            txtCpf.TabIndex = 23;
             // 
             // label2
             // 
@@ -167,6 +169,7 @@
             btnSalvar.TabIndex = 17;
             btnSalvar.Text = "Sa&lvar";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // button2
             // 
@@ -178,21 +181,43 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // txtId
+            // 
+            txtId.Location = new Point(271, 86);
+            txtId.Multiline = true;
+            txtId.Name = "txtId";
+            txtId.Size = new Size(35, 23);
+            txtId.TabIndex = 36;
+            txtId.UseSystemPasswordChar = true;
+            txtId.TextChanged += txtId_TextChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(168, 94);
+            label8.Name = "label8";
+            label8.Size = new Size(17, 15);
+            label8.TabIndex = 37;
+            label8.Text = "Id";
+            label8.Click += label8_Click;
+            // 
             // CadastroDeUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label8);
+            Controls.Add(txtId);
             Controls.Add(button2);
             Controls.Add(btnEntrar);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbTipo);
             Controls.Add(label6);
             Controls.Add(pictureBox1);
             Controls.Add(txtSenha);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(textCpf);
+            Controls.Add(txtCpf);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtNome);
@@ -209,19 +234,21 @@
         #endregion
 
         private Button btnEntrar;
-        private ComboBox comboBox1;
+        private ComboBox cmbTipo;
         private Label label6;
         private PictureBox pictureBox1;
         private TextBox txtSenha;
         private Label label5;
         private Label label4;
         private Label label3;
-        private TextBox textCpf;
+        private TextBox txtCpf;
         private Label label2;
         private Label label1;
         private TextBox txtNome;
         private Button btnEditar;
         private Button btnSalvar;
         private Button button2;
+        private TextBox txtId;
+        private Label label8;
     }
 }
