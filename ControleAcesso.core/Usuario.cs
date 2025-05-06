@@ -103,7 +103,7 @@ namespace ControleAcesso.Desk
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"INSERT INTO usuarios (nome, cpf, tipousuario, senha, ativo) " +
+            cmd.CommandText = $"INSERT INTO usuarios (nome, cpf, tipo, senha, ativo) " +
     $"VALUES ('{Nome}', '{Cpf}', '{TipoUsuario}', MD5('{Senha}'), 1)";
             cmd.ExecuteNonQuery();
             cmd.CommandText = "select last_insert_id()";
@@ -133,7 +133,8 @@ namespace ControleAcesso.Desk
                 usuario.Nome = dr.GetString(1);
                 usuario.Cpf = dr.GetString(2);
                 usuario.TipoUsuario = dr.GetString(3);
-                usuario.Ativo = dr.GetBoolean(4);
+                usuario.Senha = dr.GetString(4);
+                usuario.Ativo = dr.GetBoolean(5);
 
             }
             return usuario;

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.VisualBasic;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,9 @@ namespace ControleAcesso.Desk
         public static MySqlCommand Abrir()
         {
             MySqlCommand cmd = new();
-            string strConn = @"server=locahost;database=ControleAcesso;user=root;password=";
+           
+          string strConn = @"server=localhost;database=ControleAcesso;user=root;password=";
+        //string strConn = @"server=localhost;database=ControleAcesso;user=root;password=";
 
             // string strConn = @"server=127.0.0.1;database=tdsqueuedb01;user=root;password=" // meu servidor local
             MySqlConnection cn = new(strConn);
