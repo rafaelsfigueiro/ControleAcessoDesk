@@ -56,7 +56,7 @@ namespace ControleAcessoDesk.v2
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new(txtNome.Text,txtCpf.Text,cmbTipo.Text,txtSenha.Text);
+            Usuario usuario = new(txtNome.Text, txtCpf.Text, cmbTipo.Text, txtSenha.Text);
             usuario.Inserir();
             txtId.Text = usuario.Id.ToString();
             MessageBox.Show($"Usuário {usuario.Nome} gravado com sucesso com o ID {usuario.Id}");
@@ -71,6 +71,26 @@ namespace ControleAcessoDesk.v2
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            CadastroDeUsuario cadastroDeUsuario = new CadastroDeUsuario();
+            cadastroDeUsuario.Show();
+            this.Hide();  //Fecha a forma atual.
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show(); //abre a tela de Login
+            this.Hide();  //Fecha a forma atual.
+        }
+
+        private void boxAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            usuario.Ativo = boxAtivo.Checked;
         }
     }
 }

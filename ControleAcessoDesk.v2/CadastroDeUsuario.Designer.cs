@@ -42,9 +42,9 @@
             txtNome = new TextBox();
             btnEditar = new Button();
             btnSalvar = new Button();
-            button2 = new Button();
             txtId = new TextBox();
             label8 = new Label();
+            boxAtivo = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -56,12 +56,13 @@
             btnEntrar.TabIndex = 31;
             btnEntrar.Text = "E&ntrar";
             btnEntrar.UseVisualStyleBackColor = true;
+            btnEntrar.Click += btnEntrar_Click;
             // 
             // cmbTipo
             // 
             cmbTipo.FormattingEnabled = true;
             cmbTipo.Items.AddRange(new object[] { "Administrador", "Funcionário", "Visitante" });
-            cmbTipo.Location = new Point(285, 189);
+            cmbTipo.Location = new Point(271, 189);
             cmbTipo.Name = "cmbTipo";
             cmbTipo.Size = new Size(220, 23);
             cmbTipo.TabIndex = 30;
@@ -116,7 +117,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(152, 197);
             label3.Name = "label3";
-            label3.Size = new Size(88, 15);
+            label3.Size = new Size(89, 15);
             label3.TabIndex = 24;
             label3.Text = "&Tipo de usuário";
             // 
@@ -160,6 +161,7 @@
             btnEditar.TabIndex = 18;
             btnEditar.Text = "E&ditar";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnSalvar
             // 
@@ -170,16 +172,6 @@
             btnSalvar.Text = "Sa&lvar";
             btnSalvar.UseVisualStyleBackColor = true;
             btnSalvar.Click += btnSalvar_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(559, 347);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 33;
-            button2.Text = "&Excluir";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // txtId
             // 
@@ -201,14 +193,25 @@
             label8.Text = "Id";
             label8.Click += label8_Click;
             // 
+            // boxAtivo
+            // 
+            boxAtivo.AutoSize = true;
+            boxAtivo.Location = new Point(271, 262);
+            boxAtivo.Name = "boxAtivo";
+            boxAtivo.Size = new Size(54, 19);
+            boxAtivo.TabIndex = 38;
+            boxAtivo.Text = "&Ativo";
+            boxAtivo.UseVisualStyleBackColor = true;
+            boxAtivo.CheckedChanged += boxAtivo_CheckedChanged;
+            // 
             // CadastroDeUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(boxAtivo);
             Controls.Add(label8);
             Controls.Add(txtId);
-            Controls.Add(button2);
             Controls.Add(btnEntrar);
             Controls.Add(cmbTipo);
             Controls.Add(label6);
@@ -247,8 +250,8 @@
         private TextBox txtNome;
         private Button btnEditar;
         private Button btnSalvar;
-        private Button button2;
         private TextBox txtId;
         private Label label8;
+        private CheckBox boxAtivo;
     }
 }

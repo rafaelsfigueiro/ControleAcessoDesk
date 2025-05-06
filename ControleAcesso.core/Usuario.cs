@@ -104,7 +104,7 @@ namespace ControleAcesso.Desk
             var cmd = Banco.Abrir();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = $"INSERT INTO usuarios (nome, cpf, tipo, senha, ativo) " +
-    $"VALUES ('{Nome}', '{Cpf}', '{TipoUsuario}', MD5('{Senha}'), 1)";
+    $"VALUES ('{Nome}', '{Cpf}', '{TipoUsuario}', md5('{Senha}'), 1)";
             cmd.ExecuteNonQuery();
             cmd.CommandText = "select last_insert_id()";
             Id = Convert.ToInt32(cmd.ExecuteScalar());
@@ -153,7 +153,16 @@ namespace ControleAcesso.Desk
             // NECESSÁRIO CORRIGIR COMANDO, COMANDO DE INSERIR.
 
         }
+        public void Alterar()
+        {
+            var cmd = Banco.Abrir();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = $"update usuarios set nome = '{Nome}', cpf = '{Cpf}', tipo = '{TipoUsuario}', senha = md5('{Senha}'), ativo = {Ativo} where id = {Id}";
+            cmd.ExecuteNonQuery();
 
+            //Alterar cadastro de usuário
+
+        }
 
     }
 }

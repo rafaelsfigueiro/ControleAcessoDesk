@@ -60,8 +60,8 @@ namespace ControleAcessoDesk.v2
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            CadastroDeUsuario cadastroDeUsuario = new CadastroDeUsuario();
-            cadastroDeUsuario.Show();
+            CadastroDeUsuario cadastrar = new CadastroDeUsuario();
+            cadastrar.Show();
             this.Hide();  //Fecha a forma atual
         }
     }

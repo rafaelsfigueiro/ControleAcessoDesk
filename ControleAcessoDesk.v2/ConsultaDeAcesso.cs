@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControleAcesso.Desk;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,11 @@ namespace ControleAcessoDesk.v2
         private void ConsultaDeAcesso_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

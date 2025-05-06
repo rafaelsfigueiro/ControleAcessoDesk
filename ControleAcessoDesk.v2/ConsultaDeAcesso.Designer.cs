@@ -31,15 +31,19 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            textBox3 = new TextBox();
             dataGridView1 = new DataGridView();
+            txtnome = new DataGridViewTextBoxColumn();
+            txtcpf = new DataGridViewTextBoxColumn();
+            txttipo = new DataGridViewTextBoxColumn();
+            txtsenha = new DataGridViewTextBoxColumn();
             comboBox3 = new ComboBox();
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
             label1 = new Label();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnCancelar = new Button();
+            btnVoltar = new Button();
+            btnEditar = new Button();
+            btnFiltrar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -70,21 +74,34 @@
             label2.TabIndex = 31;
             label2.Text = "Nome";
             // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(399, 189);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(76, 23);
-            textBox3.TabIndex = 30;
-            textBox3.Text = "Filtrar";
-            // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { txtnome, txtcpf, txttipo, txtsenha });
             dataGridView1.Location = new Point(206, 218);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(407, 132);
             dataGridView1.TabIndex = 29;
+            // 
+            // txtnome
+            // 
+            txtnome.HeaderText = "NOME";
+            txtnome.Name = "txtnome";
+            // 
+            // txtcpf
+            // 
+            txtcpf.HeaderText = "CPF";
+            txtcpf.Name = "txtcpf";
+            // 
+            // txttipo
+            // 
+            txttipo.HeaderText = "TIPO";
+            txttipo.Name = "txttipo";
+            // 
+            // txtsenha
+            // 
+            txtsenha.HeaderText = "SENHA";
+            txtsenha.Name = "txtsenha";
             // 
             // comboBox3
             // 
@@ -114,56 +131,66 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(236, 51);
+            label1.Location = new Point(256, 47);
             label1.Name = "label1";
             label1.Size = new Size(253, 32);
             label1.TabIndex = 25;
             label1.Text = "Consulta de Acessos ";
             // 
-            // button3
+            // btnCancelar
             // 
-            button3.Location = new Point(474, 377);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 24;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnCancelar.Location = new Point(393, 377);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.TabIndex = 24;
+            btnCancelar.Text = "&Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnVoltar
             // 
-            button2.Location = new Point(334, 377);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 23;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnVoltar.Location = new Point(302, 377);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(75, 23);
+            btnVoltar.TabIndex = 23;
+            btnVoltar.Text = "&Voltar";
+            btnVoltar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnEditar
             // 
-            button1.Location = new Point(188, 377);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 22;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnEditar.Location = new Point(206, 377);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(75, 23);
+            btnEditar.TabIndex = 22;
+            btnEditar.Text = "E&ditar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
+            // 
+            // btnFiltrar
+            // 
+            btnFiltrar.Location = new Point(393, 189);
+            btnFiltrar.Name = "btnFiltrar";
+            btnFiltrar.Size = new Size(75, 23);
+            btnFiltrar.TabIndex = 34;
+            btnFiltrar.Text = "&Filtrar";
+            btnFiltrar.UseVisualStyleBackColor = true;
             // 
             // ConsultaDeAcesso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnFiltrar);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox3);
             Controls.Add(dataGridView1);
             Controls.Add(comboBox3);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
             Controls.Add(label1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnVoltar);
+            Controls.Add(btnEditar);
             Name = "ConsultaDeAcesso";
             Text = "ConsultaDeAcesso";
             Load += ConsultaDeAcesso_Load;
@@ -177,14 +204,18 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox textBox3;
         private DataGridView dataGridView1;
         private ComboBox comboBox3;
         private ComboBox comboBox2;
         private ComboBox comboBox1;
         private Label label1;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btnCancelar;
+        private Button btnVoltar;
+        private Button btnEditar;
+        private Button btnFiltrar;
+        private DataGridViewTextBoxColumn txtnome;
+        private DataGridViewTextBoxColumn txtcpf;
+        private DataGridViewTextBoxColumn txttipo;
+        private DataGridViewTextBoxColumn txtsenha;
     }
 }
