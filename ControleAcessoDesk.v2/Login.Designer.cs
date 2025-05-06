@@ -35,6 +35,7 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            btnFechar = new Button();
             SuspendLayout();
             // 
             // txtSenha
@@ -53,7 +54,7 @@
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(405, 232);
+            btnCadastrar.Location = new Point(354, 232);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(75, 23);
             btnCadastrar.TabIndex = 11;
@@ -63,7 +64,7 @@
             // 
             // btnAcessar
             // 
-            btnAcessar.Location = new Point(324, 232);
+            btnAcessar.Location = new Point(275, 232);
             btnAcessar.Name = "btnAcessar";
             btnAcessar.Size = new Size(75, 23);
             btnAcessar.TabIndex = 10;
@@ -101,11 +102,22 @@
             label1.TabIndex = 7;
             label1.Text = "Login";
             // 
+            // btnFechar
+            // 
+            btnFechar.Location = new Point(435, 232);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(75, 23);
+            btnFechar.TabIndex = 14;
+            btnFechar.Text = "&Fechar";
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnFechar);
             Controls.Add(txtSenha);
             Controls.Add(txtUsuario);
             Controls.Add(btnCadastrar);
@@ -129,5 +141,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private Button btnFechar;
     }
 }

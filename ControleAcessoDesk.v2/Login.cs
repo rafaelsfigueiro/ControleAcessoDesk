@@ -39,7 +39,7 @@ namespace ControleAcessoDesk.v2
                         // login aceito
                         // código para registrar o usuario logado
 
-                      
+
                     }
                     else
                     {
@@ -63,6 +63,11 @@ namespace ControleAcessoDesk.v2
             CadastroDeUsuario cadastrar = new CadastroDeUsuario();
             cadastrar.Show();
             this.Hide();  //Fecha a forma atual
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
