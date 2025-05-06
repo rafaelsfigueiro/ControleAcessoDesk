@@ -160,7 +160,7 @@ namespace ControleAcesso.Desk
             cmd.CommandText = $"update usuarios set nome = '{Nome}', cpf = '{Cpf}', tipo = '{TipoUsuario}', senha = md5('{Senha}'), ativo = {Ativo} where id = {Id}";
             cmd.ExecuteNonQuery();
 
-            //Alterar cadastro de usuário
+            //Alterar cadastro de usuário.
 
         }
 
