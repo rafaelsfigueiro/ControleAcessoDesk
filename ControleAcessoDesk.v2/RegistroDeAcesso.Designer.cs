@@ -46,6 +46,7 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            btnVoltar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgwRegistroAcesso).BeginInit();
             SuspendLayout();
             // 
@@ -201,11 +202,22 @@
             label1.TabIndex = 20;
             label1.Text = "&Entrada";
             // 
+            // btnVoltar
+            // 
+            btnVoltar.Location = new Point(550, 419);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(75, 23);
+            btnVoltar.TabIndex = 34;
+            btnVoltar.Text = "&Voltar";
+            btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += btnVoltar_Click;
+            // 
             // RegistroDeAcesso
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnVoltar);
             Controls.Add(dateTimePicker3);
             Controls.Add(comboBox1);
             Controls.Add(label5);
@@ -248,5 +260,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private Button btnVoltar;
     }
 }

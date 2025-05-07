@@ -61,9 +61,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(206, 168);
             label3.Name = "label3";
-            label3.Size = new Size(31, 15);
+            label3.Size = new Size(26, 15);
             label3.TabIndex = 32;
-            label3.Text = "Data";
+            label3.Text = "Cpf";
             // 
             // label2
             // 
@@ -80,8 +80,10 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { txtnome, txtcpf, txttipo, txtsenha });
             dataGridView1.Location = new Point(206, 218);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(407, 132);
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Size = new Size(403, 132);
             dataGridView1.TabIndex = 29;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // txtnome
             // 
@@ -114,10 +116,12 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Administrador", "Funcionário", "Visitante" });
             comboBox2.Location = new Point(256, 189);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(121, 23);
             comboBox2.TabIndex = 27;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // comboBox1
             // 
@@ -154,6 +158,7 @@
             btnVoltar.TabIndex = 23;
             btnVoltar.Text = "&Voltar";
             btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // btnEditar
             // 

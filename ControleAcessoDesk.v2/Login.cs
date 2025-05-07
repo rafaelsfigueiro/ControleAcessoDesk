@@ -32,8 +32,8 @@ namespace ControleAcessoDesk.v2
                 {
                     if (usuario.Ativo)
                     {
-                        CadastroDeUsuario cadastroDeUsuario = new CadastroDeUsuario();
-                        cadastroDeUsuario.Show();
+                        inicial inicial = new inicial();
+                        inicial.Show();
                         this.Hide();  //Fecha a forma atual
 
                         // login aceito

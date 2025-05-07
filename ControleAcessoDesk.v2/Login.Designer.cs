@@ -30,7 +30,6 @@
         {
             txtSenha = new TextBox();
             txtUsuario = new TextBox();
-            btnCadastrar = new Button();
             btnAcessar = new Button();
             label3 = new Label();
             label2 = new Label();
@@ -52,19 +51,9 @@
             txtUsuario.Size = new Size(156, 23);
             txtUsuario.TabIndex = 12;
             // 
-            // btnCadastrar
-            // 
-            btnCadastrar.Location = new Point(354, 232);
-            btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(75, 23);
-            btnCadastrar.TabIndex = 11;
-            btnCadastrar.Text = "&Cadastrar";
-            btnCadastrar.UseVisualStyleBackColor = true;
-            btnCadastrar.Click += btnCadastrar_Click;
-            // 
             // btnAcessar
             // 
-            btnAcessar.Location = new Point(275, 232);
+            btnAcessar.Location = new Point(324, 232);
             btnAcessar.Name = "btnAcessar";
             btnAcessar.Size = new Size(75, 23);
             btnAcessar.TabIndex = 10;
@@ -104,7 +93,7 @@
             // 
             // btnFechar
             // 
-            btnFechar.Location = new Point(435, 232);
+            btnFechar.Location = new Point(405, 232);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(75, 23);
             btnFechar.TabIndex = 14;
@@ -120,7 +109,6 @@
             Controls.Add(btnFechar);
             Controls.Add(txtSenha);
             Controls.Add(txtUsuario);
-            Controls.Add(btnCadastrar);
             Controls.Add(btnAcessar);
             Controls.Add(label3);
             Controls.Add(label2);

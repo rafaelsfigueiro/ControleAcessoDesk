@@ -92,5 +92,17 @@ namespace ControleAcessoDesk.v2
             Usuario usuario = new Usuario();
             usuario.Ativo = boxAtivo.Checked;
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVoltar_Click_1(object sender, EventArgs e)
+        {
+            inicial inicial = new inicial();
+            inicial.Show();
+            this.Hide();  //Fecha a forma atual
+        }
     }
 }

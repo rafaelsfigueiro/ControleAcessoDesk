@@ -61,5 +61,12 @@ namespace ControleAcessoDesk.v2
         {
 
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            inicial inicial = new inicial();
+            inicial.Show();
+            this.Hide();  //Fecha a forma atual
+        }
     }
 }

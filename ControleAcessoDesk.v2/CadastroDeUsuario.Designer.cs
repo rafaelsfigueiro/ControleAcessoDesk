@@ -45,6 +45,7 @@
             txtId = new TextBox();
             label8 = new Label();
             boxAtivo = new CheckBox();
+            btnVoltar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -204,11 +205,22 @@
             boxAtivo.UseVisualStyleBackColor = true;
             boxAtivo.CheckedChanged += boxAtivo_CheckedChanged;
             // 
+            // btnVoltar
+            // 
+            btnVoltar.Location = new Point(559, 347);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(75, 23);
+            btnVoltar.TabIndex = 39;
+            btnVoltar.Text = "&Voltar";
+            btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += btnVoltar_Click_1;
+            // 
             // CadastroDeUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnVoltar);
             Controls.Add(boxAtivo);
             Controls.Add(label8);
             Controls.Add(txtId);
@@ -253,5 +265,6 @@
         private TextBox txtId;
         private Label label8;
         private CheckBox boxAtivo;
+        private Button btnVoltar;
     }
 }

@@ -25,7 +25,24 @@ namespace ControleAcessoDesk.v2
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            inicial inicial = new inicial();
+            inicial.Show();
+            this.Hide();  //Fecha a forma atual
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
